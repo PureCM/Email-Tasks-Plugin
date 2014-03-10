@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Plugin_EMailChangesets_Config.xml - rename to Plugin_EMailChangesets_1.xml (or _2, _3 for multiple etc.) and set Enabled to true-->
+<Config>
+  <!--Set Enabled to true to enable the plugin instance-->
+  <Enabled>false</Enabled>
+
+  <!--If this is enabled then logging information will be written to log.txt in the plugin directory-->
+  <EnableLog>false</EnableLog>
+
+  <!--Pattern match for Repositories we want to process-->
+  <ReposPattern>.*</ReposPattern>
+
+  <!-- from address passed to SMTP when sending emails -->
+  <From>somebody@somecompany.com</From>
+
+  <!--List of recipients of the emails-->
+  <Recipients>
+    <Recipient>somebodyelse@somecompany.com</Recipient>
+  </Recipients>
+
+  <!--SMTP Server used for sending emails-->
+  <SMTPServer>localhost</SMTPServer>
+
+  <!--Define SMTP User and Password if your server needs authentication-->
+  <SMTPUser></SMTPUser>
+  <SMTPPassword></SMTPPassword>
+
+  <!--Define the format of the Subject Used for email - {0} expands to Project Item name, {1} to Repository Name-->
+  <SubjectFormat>Project Task {0} has been created in repository {1}</SubjectFormat>
+
+</Config>
